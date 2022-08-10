@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencil Communty</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="profile">
+            <figure>
+                <img src="https://cdn.discordapp.com/attachments/965957184049545306/1006771838292066314/KpBPeIgyYAZTV7pQ7tT2HD303RR5vTfQ.gif" alt="프로필 이미지">
+            </figure>
+            <div class="profile__info">
+            <h2>연필</h2>
+            <p>연필 커뮤니티</p>
+        </div>
+        </div>
+        <ul class="link">
+            <li ><a href="https://discord.com/invite/pencil">디스코드<img src="./assets/cheveron-right.png" alt="유튜브 바로가기"></a></li>
+            <li ><a href="https://rail4989.com/">레일<img src="./assets/cheveron-right.png" alt="블로그 바로가기"></a></li>
+            <li ><a href="http://pen-kor.com/">펜타곤<img src="./assets/cheveron-right.png" alt="인스타그램 바로가기"></a></li>
+        </ul>
+        <footer>
+            <a class="btn" id="share" href="" onclick="copyToClipboard();"><img src="./assets/share.png" alt="공유하기">공유하기</a>
+            <a class="btn btn-black" id="copybtn2" href="" onclick="copyToClipboard1();"><img src="./assets/mail-open.png" alt="업무제안">문의하기</a>
+        </footer>
+    </main>
+    <script>
+        function copyToClipboard(val) {
+            var t = document.createElement("textarea");
+            document.body.appendChild(t);
+            t.value = "http://127.0.0.1:5500/index.html";
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
+            alert('주소를 복사하였습니다.')
+        }
+        function copyToClipboard1(val) {
+            var t = document.createElement("textarea");
+            document.body.appendChild(t);
+            t.value = "คʕ•ﻌ•ʔค#0001";
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
+            alert("디스코드 " + `${t.value}` + "가 복사 되었습니다")
+        }
+      </script>
+</body>
+</html>
